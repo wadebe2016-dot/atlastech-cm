@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlastech Solution SARL — Le socle de votre transformation numérique</title>
+<meta name="description" content="Atlastech Solution SARL, éditeur de logiciels SaaS basé à Douala, Cameroun : gestion scolaire, cliniques, tontines, files d'attente, micro-crédit, hôtellerie et voix du client.">
+<style>
+  :root{
+    --navy:#15204A; --navy-2:#1D2B61; --navy-soft:#EEF1F9;
+    --or:#E9A922; --or-fonce:#C8890D;
+    --encre:#1A2233; --sourdine:#5D6780; --trait:#E4E8F1;
+    --blanc:#FFFFFF; --fond:#F7F8FC;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    color:var(--encre); background:var(--blanc); line-height:1.6; font-size:16px;
+  }
+  .conteneur{max-width:1080px; margin:0 auto; padding:0 22px;}
+  header{
+    position:sticky; top:0; z-index:10; background:rgba(21,32,74,.97);
+    backdrop-filter:blur(6px);
+  }
+  .barre{display:flex; align-items:center; gap:14px; padding:14px 0;}
+  .logo{display:flex; align-items:center; gap:10px; text-decoration:none;}
+  .logo .embleme{
+    width:36px; height:36px; border-radius:9px; background:var(--or);
+    display:grid; place-items:center; font-weight:800; font-size:19px; color:var(--navy);
+  }
+  .logo b{color:#fff; font-size:18px; letter-spacing:.3px;}
+  .logo b span{color:var(--or);}
+  nav{margin-left:auto; display:flex; gap:22px;}
+  nav a{color:#C9D2E8; text-decoration:none; font-size:14px; font-weight:600;}
+  nav a:hover{color:#fff;}
+  @media (max-width:640px){ nav{display:none;} }
+  .heros{
+    background:linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 55%, #24347A 100%);
+    color:#fff; padding:84px 0 90px; position:relative; overflow:hidden;
+  }
+  .heros::after{
+    content:""; position:absolute; right:-120px; top:-120px; width:420px; height:420px;
+    border-radius:50%; border:1px solid rgba(233,169,34,.25);
+  }
+  .heros::before{
+    content:""; position:absolute; right:60px; bottom:-160px; width:340px; height:340px;
+    border-radius:50%; border:1px solid rgba(255,255,255,.08);
+  }
+  .heros h1{font-size:clamp(28px,4.6vw,44px); line-height:1.15; max-width:640px; font-weight:800;}
+  .heros h1 em{color:var(--or); font-style:normal;}
+  .heros p.accroche{margin-top:18px; max-width:560px; font-size:17px; color:#D5DCEE;}
+  .heros .actions{margin-top:32px; display:flex; gap:14px; flex-wrap:wrap;}
+  .btn{
+    display:inline-block; padding:13px 26px; border-radius:10px; font-weight:700;
+    font-size:15px; text-decoration:none; transition:transform .12s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-or{background:var(--or); color:var(--navy);}
+  .btn-contour{border:1.5px solid rgba(255,255,255,.4); color:#fff;}
+  section{padding:72px 0;}
+  .sur-titre{
+    color:var(--or-fonce); font-weight:800; letter-spacing:2.5px; font-size:12px;
+    text-transform:uppercase;
+  }
+  h2{font-size:clamp(24px,3.2vw,32px); color:var(--navy); margin:8px 0 14px; font-weight:800;}
+  .intro{color:var(--sourdine); max-width:640px;}
+  .fond-doux{background:var(--fond);}
+  .grille{
+    margin-top:40px; display:grid; gap:18px;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .produit{
+    background:var(--blanc); border:1px solid var(--trait); border-radius:16px;
+    padding:24px; display:flex; flex-direction:column; gap:8px;
+    transition:box-shadow .15s ease, transform .15s ease;
+  }
+  .produit:hover{box-shadow:0 12px 30px rgba(21,32,74,.10); transform:translateY(-2px);}
+  .pastille{
+    width:44px; height:44px; border-radius:12px; display:grid; place-items:center;
+    color:#fff; font-weight:800; font-size:18px;
+  }
+  .produit h3{color:var(--navy); font-size:18px; margin-top:4px;}
+  .produit .domaine{
+    font-size:11.5px; font-weight:800; letter-spacing:1.6px; text-transform:uppercase;
+    color:var(--sourdine);
+  }
+  .produit p{color:var(--sourdine); font-size:14.5px;}
+  .etat{
+    margin-top:auto; padding-top:10px; font-size:12px; font-weight:700;
+  }
+  .etat.dispo{color:#1F7A4D;}
+  .etat.bientot{color:var(--or-fonce);}
+  .atouts{display:grid; gap:26px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); margin-top:36px;}
+  .atout h3{color:var(--navy); font-size:16.5px; margin-bottom:6px;}
+  .atout p{color:var(--sourdine); font-size:14.5px;}
+  .atout .num{
+    color:var(--or); font-weight:800; font-size:26px; line-height:1;
+  }
+  .contact-carte{
+    margin-top:36px; background:var(--navy); color:#fff; border-radius:20px;
+    padding:40px; display:grid; gap:28px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  }
+  .contact-carte h3{color:var(--or); font-size:13px; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px;}
+  .contact-carte a{color:#fff; text-decoration:none; font-weight:600;}
+  .contact-carte a:hover{text-decoration:underline;}
+  .contact-carte p{color:#C9D2E8; font-size:14.5px;}
+  footer{background:#0E1633; color:#8D97B5; padding:34px 0; font-size:13px;}
+  footer .conteneur{display:flex; flex-wrap:wrap; gap:10px 30px; justify-content:space-between;}
+  footer b{color:#C9D2E8;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="conteneur barre">
+    <a class="logo" href="#"><span class="embleme">A</span><b>Atlastech <span>Solution</span></b></a>
+    <nav>
+      <a href="#produits">Nos solutions</a>
+      <a href="#entreprise">L'entreprise</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="heros">
+  <div class="conteneur">
+    <h1>Le socle de votre <em>transformation numérique</em></h1>
+    <p class="accroche">
+      Atlastech Solution conçoit et opère des logiciels de gestion pensés pour les réalités
+      africaines : paiement Mobile Money intégré, sobriété en données, et un accompagnement
+      de proximité depuis Douala.
+    </p>
+    <div class="actions">
+      <a class="btn btn-or" href="#produits">Découvrir nos solutions</a>
+      <a class="btn btn-contour" href="#contact">Nous contacter</a>
+    </div>
+  </div>
+</div>
+
+<section id="produits" class="fond-doux">
+  <div class="conteneur">
+    <div class="sur-titre">Nos solutions</div>
+    <h2>Une suite logicielle pour chaque secteur</h2>
+    <p class="intro">
+      Chaque produit partage le même socle éprouvé : architecture multi-établissements,
+      encaissement par Mobile Money (MTN et Orange) et par voie bancaire, et notifications
+      WhatsApp et SMS.
+    </p>
+    <div class="grille">
+      <div class="produit">
+        <div class="pastille" style="background:#2E7D32;">E</div>
+        <div class="domaine">Éducation</div>
+        <h3>Edufo</h3>
+        <p>La gestion complète des établissements scolaires : scolarité, recouvrement des frais,
+        pilotage financier, espace parents et assistant IA.</p>
+        <div class="etat dispo">Disponible</div>
+      </div>
+      <div class="produit">
+        <div class="pastille" style="background:#0E9488;">K</div>
+        <div class="domaine">Santé</div>
+        <h3>Kliniko</h3>
+        <p>Le système de gestion des cliniques : dossiers patients, agenda et réservation en ligne,
+        ordonnances, facturation et paiement Mobile Money.</p>
+        <div class="etat dispo">Disponible</div>
+      </div>
+      <div class="produit">
+        <div class="pastille" style="background:#6B2747;">T</div>
+        <div class="domaine">Finance communautaire</div>
+        <h3>Tontio</h3>
+        <p>La tontine digitale : cotisations, tours et redistributions gérés en toute transparence,
+        avec traçabilité de chaque franc.</p>
+        <div class="etat bientot">Bientôt disponible</div>
+      </div>
+      <div class="produit">
+        <div class="pastille" style="background:#2E2F86;">F</div>
+        <div class="domaine">Accueil du public</div>
+        <h3>Fileo</h3>
+        <p>Files d'attente et rendez-vous pour les administrations et services : moins d'attente
+        sur place, plus de fluidité au guichet.</p>
+        <div class="etat bientot">Bientôt disponible</div>
+      </div>
+      <div class="produit">
+        <div class="pastille" style="background:#1B2430;">RG</div>
+        <div class="domaine">Transport interurbain</div>
+        <h3><a href="https://readygo.atlastech.cm" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">ReadyGo</a></h3>
+        <p>La billetterie des agences de voyage : réservation en ligne, choix du siège,
+        paiement Mobile Money, billet QR et contrôle d'embarquement.</p>
+        <div class="etat bientot">Bientôt disponible</div>
+      </div>
+      <div class="produit">
+        <div class="pastille" style="background:#4A5568;">V</div>
+        <div class="domaine">Relation client</div>
+        <h3>VoxEcho</h3>
+        <p>La voix du client, mesurée en continu : enquêtes de satisfaction multicanales
+        et tableaux de bord pour tous les secteurs.</p>
+        <div class="etat bientot">Bientôt disponible</div>
+      </div>
+      <div class="produit">
+        <div class="pastille" style="background:#8A6D3B;">L</div>
+        <div class="domaine">Hôtellerie</div>
+        <h3>Lumea</h3>
+        <p>La gestion hôtelière nouvelle génération : réservations, chambres, facturation
+        et pilotage de l'activité.</p>
+        <div class="etat bientot">En conception</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="entreprise">
+  <div class="conteneur">
+    <div class="sur-titre">L'entreprise</div>
+    <h2>Un éditeur camerounais, une ambition africaine</h2>
+    <p class="intro">
+      Atlastech Solution SARL est un éditeur de logiciels immatriculé à Douala.
+      Nous construisons des produits qui fonctionnent là où nos clients travaillent :
+      connexions intermittentes, paiements mobiles, terrain réel.
+    </p>
+    <div class="atouts">
+      <div class="atout">
+        <div class="num">7</div>
+        <h3>Produits dans la suite</h3>
+        <p>De l'école à la clinique, de la tontine à l'hôtel : un socle commun,
+        des métiers maîtrisés.</p>
+      </div>
+      <div class="atout">
+        <div class="num">100%</div>
+        <h3>Pensé pour l'Afrique</h3>
+        <p>Mobile Money natif, interfaces légères, notifications WhatsApp :
+        nos choix techniques partent du terrain.</p>
+      </div>
+      <div class="atout">
+        <div class="num">24/7</div>
+        <h3>Infrastructure cloud</h3>
+        <p>Hébergement sécurisé, données chiffrées en transit, sauvegardes
+        automatiques et surveillance continue.</p>
+      </div>
+      <div class="atout">
+        <div class="num">CM</div>
+        <h3>Proximité réelle</h3>
+        <p>Une équipe basée à Douala, joignable par WhatsApp, qui déploie,
+        forme et accompagne ses clients.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="fond-doux">
+  <div class="conteneur">
+    <div class="sur-titre">Contact</div>
+    <h2>Parlons de votre projet</h2>
+    <div class="contact-carte">
+      <div>
+        <h3>Écrivez-nous</h3>
+        <p><a href="mailto:contact@atlastech.cm">contact@atlastech.cm</a></p>
+      </div>
+      <div>
+        <h3>Appelez-nous</h3>
+        <p><a href="tel:+237641175343">+237 641 17 53 43</a></p>
+        <p>WhatsApp : <a href="https://wa.me/237622524544">+237 622 52 45 44</a></p>
+      </div>
+      <div>
+        <h3>Nous trouver</h3>
+        <p>Atlastech Solution SARL<br>Douala, Cameroun</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="conteneur">
+    <div><b>Atlastech Solution SARL</b> — Douala, Cameroun</div>
+    <div>RCCM : CM-DLA-02-2026-B13-06806 &nbsp;·&nbsp; NIU : M062610767654X</div>
+    <div>© 2026 Atlastech Solution. Tous droits réservés.</div>
+  </div>
+</footer>
+
+</body>
+</html>
